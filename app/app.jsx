@@ -1,28 +1,44 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
 const React = require('react');
 const { render } = require('react-dom');
 
+// console.log(process.env.REACT_APP_dirbleToken);
+
+// require('dotenv').config();
+const thunk = require('redux-thunk');
 // router
 const Route = require('react-router-dom').Route;
 const BrowserRouter = require('react-router-dom').BrowserRouter;
-const hashHistory = require('react-router-dom').hashHistory;
+const Switch = require('react-router-dom').Switch;
 
 // redux
-const { createStore } = require('redux');
+const { createStore , applyMiddleware} = require('redux');
 const { Provider } = require('react-redux');
-const votes = require('./reducers');
+const reducers = require('./reducers');
+const ReduxThunk = require('redux-thunk').default;
 
-let store = createStore(votes);
+const logAction = store => next => action =>{
+  console.log(JSON.stringify(action));
+  try{
+    return next(action);
+  }catch(e){
+    console.log(e);
+  }
+  
+};
+
+let store = createStore(reducers, applyMiddleware(ReduxThunk));
 
 /* Import Components */
-const HelloWorld = require('./components/HelloWorld');
-const About = require('./components/About');
+const Station = require('./components/Station');
+const ErrorPage = require('./components/ErrorPage');
 
 render((
   <Provider store={store}>
     <BrowserRouter>
-      <div>
-        <Route exact path="/" component={HelloWorld}/>
-        <Route path="/about" component={About}/>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Station}/>
+        <Route component={ErrorPage}/>
+      </Switch>
     </BrowserRouter>
   </Provider>), document.getElementById('main'));
