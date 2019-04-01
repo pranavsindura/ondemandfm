@@ -1,22 +1,22 @@
 /* reducers */
 
-const { UPVOTE, DOWNVOTE } = require('./actions');
+// const { UPVOTE, DOWNVOTE } = require('./actions');
 
-function votes(state = [], action) {
-  switch (action.type) {
-    case UPVOTE: 
-      return Object.assign({}, state, {
-        voteScore: ( state.voteScore ) ? state.voteScore + 1 : 1,
-        voteCount: ( state.voteCount ) ? state.voteCount + 1 : 1
-      });
-    case DOWNVOTE:
-       return Object.assign({}, state, {
-        voteScore: ( state.voteScore ) ? state.voteScore - 1 : -1,
-        voteCount: ( state.voteCount ) ? state.voteCount + 1 : 1
-      });
-    default:
-      return state;
+
+let initialState = {
+  stationList: [
+    {id:1, name:'PRANAV SINDURA'}
+  ]
+};
+
+let reducer = (state = initialState, action)=>
+{
+  // console.log(process.env);
+  let newState = {...state};
+  switch(action.type){
+    case 'GET_ALL': newState.stationList = action.payload; return newState;
+    default: return state;
   }
 }
 
-module.exports = votes
+module.exports = reducer;
