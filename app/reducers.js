@@ -4,9 +4,7 @@
 
 
 let initialState = {
-  stationList: [
-    {id:1, name:'PRANAV SINDURA'}
-  ],
+  stationList: [  ],
   searchQuery: '',
   searchResult: []
 };

@@ -22,7 +22,9 @@ const getSearchResultAsync = (station) => {
 
 const getStations = () => {
   return (dispatch) => {
-    return axios.get(`${proxyURL}/https://api.dirble.com/v2/stations?token=${token}`, header)
+    // return axios.get(`${proxyURL}/https://api.dirble.com/v2/stations?token=${token}`, header)
+    return axios.get(`${proxyURL}/https://api.dirble.com/v2/stations/popular?token=${token}`, header)
+
                 .then((res)=>{ return dispatch(getStationsAsync(res.data))})
                 .catch((e)=>{return dispatch(getStationsAsync([]))});
   }
