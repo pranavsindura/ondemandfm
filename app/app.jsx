@@ -1,7 +1,7 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 const React = require('react');
 const { render } = require('react-dom');
-
+const { composeWithDevTools } = require('redux-devtools-extension');
 // console.log(process.env.REACT_APP_dirbleToken);
 
 // require('dotenv').config();
@@ -27,7 +27,7 @@ const logAction = store => next => action =>{
   
 };
 
-let store = createStore(reducers, applyMiddleware(ReduxThunk));
+let store = createStore(reducers, composeWithDevTools(applyMiddleware(ReduxThunk)));
 
 /* Import Components */
 const Station = require('./components/Station');

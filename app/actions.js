@@ -8,35 +8,33 @@ const token = require('./config');
 
 const header = {headers: {'Access-Control-Allow-Origin': '*',}};
 
+const getSearchResult = (query)=>{
+  return dispatch => {
+    return axios.post(`${proxyURL}/https://api.dirble.com/v2/search?token=${token}`,{query: query}, header)
+                .then((res)=>{return dispatch(getSearchResultAsync(res.data))})
+                .catch((e)=>{return dispatch(getSearchResultAsync([]))});
+  }
+}
+
+const getSearchResultAsync = (station) => {
+  return {type:'SEARCH_RESULT', payload:station};
+}
+
 const getStations = () => {
   return (dispatch) => {
     return axios.get(`${proxyURL}/https://api.dirble.com/v2/stations?token=${token}`, header)
                 .then((res)=>{ return dispatch(getStationsAsync(res.data))})
-                .catch((e)=>{return dispatch(dispatch(getStationsAsync([])))});
+                .catch((e)=>{return dispatch(getStationsAsync([]))});
   }
 }
-/*
-const getStations = (dispatch) =>{
-  // let stations = [];
-  return axios.get(`${proxyURL}/https://api.dirble.com/v2/stations?token=c64e24acac3d8935a90ec733dd`,{headers: {'Access-Control-Allow-Origin': '*',}})  
-                          .then(res=>{
-                              // newState.stationList = [...res.data];
-                              // console.log(res.data);
-                              // stations = res.data;
-                              return dispatch(getStationsAsync(res.data));
-                          })
-                          .catch(e=>{return dispatch(getStationsAsync([]))});
-  
-};
-
-const getS = ()=>{
-  return dispatch => {
-    return getStations().then(res=> {return dispatch(getStationsAsync(res.data))}).catch(e=>{return dispatch(getStationsAsync([]))});
-  }
-}
-*/
 const getStationsAsync = (stations)=>{
   return {type: 'GET_ALL', payload:stations};
 };
 
-module.exports = { getStations }
+const changeSearchQuery = (query)=>{
+  return (dispatch)=> {
+    return dispatch({type:'CHANGE_SEARCH_QUERY', payload: query})
+  }
+}
+
+module.exports = { getStations, changeSearchQuery, getSearchResult }
