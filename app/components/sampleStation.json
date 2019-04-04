@@ -1,0 +1,521 @@
+[
+	{
+		"id": 11835,
+		"name": "Jazz Radio  Christmas Jazz",
+		"country": "FR",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazz-radio-christmas-jazz",
+		"website": "",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://jzr-christmas.ice.infomaniak.ch:80/jzr-christmas.mp3",
+				"bitrate": 128,
+				"content_type": "text/html",
+				"status": 1,
+				"listeners": 0
+			}
+		],
+		"created_at": "2015-01-02T06:43:55+01:00",
+		"updated_at": "2015-04-11T14:19:34+02:00"
+	},
+	{
+		"id": 9552,
+		"name": "Jazz Lounge Radio  Friendly Jazz Mix",
+		"country": "KR",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazz-lounge-radio-friendly-jazz-mix",
+		"website": "http://jazzlounge.kr",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{ "stream": "http://222.122.178.181:7660", "bitrate": 0, "content_type": "?", "status": 1, "listeners": 0 }
+		],
+		"created_at": "2014-03-04T21:38:10+01:00",
+		"updated_at": "2015-04-11T14:15:25+02:00"
+	},
+	{
+		"id": 27004,
+		"name": "JazzRadio - Gypsy Jazz",
+		"country": "US",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazzradio-gypsy-jazz",
+		"website": "",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://pub5.jazzradio.com/jr_gypsyjazz_aac",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub4.jazzradio.com:80/jr_gypsyjazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub5.jazzradio.com:80/jr_gypsyjazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub6.jazzradio.com:80/jr_gypsyjazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub5.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 3
+			},
+			{
+				"stream": "http://pub2.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 3
+			},
+			{
+				"stream": "http://pub1.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 3
+			},
+			{
+				"stream": "http://pub7.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 3
+			},
+			{
+				"stream": "http://pub4.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub8.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub6.jazzradio.com:80/jr_gypsyjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			}
+		],
+		"created_at": "2016-02-04T21:58:27+01:00",
+		"updated_at": "2017-07-18T14:31:15+02:00"
+	},
+	{
+		"id": 27006,
+		"name": "JazzRadio - Current Jazz",
+		"country": "US",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazzradio-current-jazz",
+		"website": "",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://pub4.jazzradio.com/jr_currentjazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 0,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub5.jazzradio.com/jr_currentjazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub8.jazzradio.com/jr_currentjazz_aac",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 4
+			},
+			{
+				"stream": "http://pub6.jazzradio.com/jr_currentjazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub2.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub1.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub4.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub7.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub8.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub6.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub5.jazzradio.com:80/jr_currentjazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			}
+		],
+		"created_at": "2016-02-04T21:58:28+01:00",
+		"updated_at": "2017-07-18T14:31:15+02:00"
+	},
+	{
+		"id": 27008,
+		"name": "JazzRadio - Piano Jazz",
+		"country": "US",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazzradio-piano-jazz",
+		"website": "",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://pub5.jazzradio.com/jr_pianojazz_aac",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub4.jazzradio.com/jr_pianojazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 0,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub5.jazzradio.com/jr_pianojazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub6.jazzradio.com/jr_pianojazz?",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub2.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub6.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub4.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub7.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub1.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://pub8.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 1
+			},
+			{
+				"stream": "http://pub5.jazzradio.com:80/jr_pianojazz_aacplus",
+				"bitrate": 48000,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			}
+		],
+		"created_at": "2016-02-04T21:58:28+01:00",
+		"updated_at": "2017-07-18T14:25:26+02:00"
+	},
+	{
+		"id": 2964,
+		"name": "Jazz Radio",
+		"country": "HU",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazz-radio",
+		"website": "http://www.jazzradio.hu/",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{ "stream": "http://194.38.105.21:8002", "bitrate": 192, "content_type": "?", "status": 1, "listeners": 0 }
+		],
+		"created_at": "2013-10-13T20:30:36+02:00",
+		"updated_at": "2015-04-11T14:12:12+02:00"
+	},
+	{
+		"id": 3459,
+		"name": "Nrk Jazz",
+		"country": "NO",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "nrk-jazz",
+		"website": "http://www.nrk.no/jazz/",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://lyd.nrk.no:80/nrk_radio_jazz_aac_l",
+				"bitrate": 0,
+				"content_type": "?",
+				"status": 1,
+				"listeners": 0
+			}
+		],
+		"created_at": "2013-10-19T19:24:28+02:00",
+		"updated_at": "2015-04-11T14:12:19+02:00"
+	},
+	{
+		"id": 9566,
+		"name": "Jazz FM",
+		"country": "GB",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "jazz-fm-c8e67f52-4b23-40f8-8645-27846078d082",
+		"website": "http://www.jazzfm.com/",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			},
+			{ "id": 25, "title": "Mainstream Jazz", "description": "", "slug": "mainstream-jazz", "ancestry": "12" }
+		],
+		"streams": [
+			{
+				"stream": "http://listen.onmyradio.net:8050",
+				"bitrate": 128,
+				"content_type": "?",
+				"status": 1,
+				"listeners": 0
+			},
+			{
+				"stream": "http://listen.onmyradio.net:8000",
+				"bitrate": 64,
+				"content_type": "?",
+				"status": 0,
+				"listeners": 0
+			}
+		],
+		"created_at": "2014-03-04T22:10:01+01:00",
+		"updated_at": "2015-04-11T14:15:28+02:00"
+	},
+	{
+		"id": 12804,
+		"name": "Nrk Jazz ",
+		"country": "NO",
+		"image": { "url": null, "thumb": { "url": null } },
+		"slug": "nrk-jazz-80f786b3-c6a9-4d63-8f62-a14d8128f11e",
+		"website": "http://lyd.nrk.no/nrk_radio_jazz_mp3_m",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 12,
+				"title": "Jazz",
+				"description": "The classical music - Jazz.",
+				"slug": "jazz",
+				"ancestry": null
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://lyd.nrk.no/nrk_radio_jazz_mp3_m",
+				"bitrate": 0,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			}
+		],
+		"created_at": "2015-04-23T23:56:33+02:00",
+		"updated_at": "2015-04-23T23:56:37+02:00"
+	},
+	{
+		"id": 40464,
+		"name": "AZUR Jazz",
+		"country": "US",
+		"image": {
+			"url": "https://img.dirble.com/station/40464/c175.png",
+			"thumb": { "url": "https://img.dirble.com/station/40464/thumb_c175.png" }
+		},
+		"slug": "azur-jazz",
+		"website": "http://www.azurradio.net/",
+		"twitter": null,
+		"facebook": null,
+		"total_listeners": 0,
+		"categories": [
+			{
+				"id": 45,
+				"title": "Variety",
+				"description": "Variety or various, playing more or less everything.",
+				"slug": "variety",
+				"ancestry": "44"
+			}
+		],
+		"streams": [
+			{
+				"stream": "http://listen.radionomy.com/Azur-JAZZ",
+				"bitrate": 128,
+				"content_type": "audio/mpeg",
+				"status": 1,
+				"listeners": 0
+			}
+		],
+		"created_at": "2017-02-16T22:34:58+01:00",
+		"updated_at": "2017-02-18T21:01:43+01:00"
+	}
+]
