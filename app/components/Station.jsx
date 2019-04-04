@@ -36,7 +36,7 @@ class Station extends React.Component {
       let playable = true;
       // if(ReactPlayer.canPlay(e.stream)){ this.setState({ link: e.stream }); return;}
       const header = {headers: {'Access-Control-Allow-Origin': '*',}};
-      playable = Axios.get(e.stream,header).then((res)=> {console.log('RES: ',res);}).catch(e=>{this.setState({link: this.state.prevLink});console.log('ERR: ',e); return false;})
+      playable = Axios.get(e.stream,header).then((res)=> {console.log('RES: ',res); return true;}).catch(e=>{this.setState({link: this.state.prevLink});console.log('ERR: ',e); return false;})
       setTimeout(()=>{
         if(playable)
         {
