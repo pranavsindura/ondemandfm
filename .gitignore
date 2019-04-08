@@ -1,6 +1,7 @@
 public
 app/.env
 /app/config.js
+app/config.js
 config.js
 node_modules
 oTd
