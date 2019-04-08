@@ -1,4 +1,4 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
+// require( 'bootstrap/dist/css/bootstrap.min.css');
 const React = require('react');
 const { render } = require('react-dom');
 const { composeWithDevTools } = require('redux-devtools-extension');
@@ -32,13 +32,23 @@ let store = createStore(reducers, composeWithDevTools(applyMiddleware(ReduxThunk
 /* Import Components */
 const Station = require('./components/Station');
 const ErrorPage = require('./components/ErrorPage');
+const NavBar = require('./components/NavBar');
+const About = require('./components/About');
+const Home = require('./components/Home');
+const Popular = require('./components/Popular');
 
 render((
   <Provider store={store}>
     <BrowserRouter>
+    <div>
+    <NavBar/>
       <Switch>
-        <Route exact path="/" component={Station}/>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/search" component={Station}/>
+        <Route exact path="/popular" component={Popular}/>
+        <Route exact path="/about" component={About}/>
         <Route component={ErrorPage}/>
       </Switch>
+      </div>
     </BrowserRouter>
   </Provider>), document.getElementById('main'));
