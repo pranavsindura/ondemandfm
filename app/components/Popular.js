@@ -7,7 +7,7 @@ const Axios = require('axios');
 
 const { Container, Card, CardHeader, CardBody, Input, InputGroup, Media, ButtonGroup, Button } = require('reactstrap');
 
-class Station extends React.Component {
+class Popular extends React.Component {
 	constructor(props) {
     super(props);
     // this.handleLink = this.handleLink.bind(this);
@@ -19,7 +19,8 @@ class Station extends React.Component {
   }
   componentWillMount()
   {
-    this.props.onGetStations();
+    // this.props.onGetStations();
+    this.props.onGetPopular();
   }
 
   handlePlay()
@@ -30,8 +31,8 @@ class Station extends React.Component {
 	handleLink(index1)  {
     // console.log(this.props.searchResult[index1].streams);
     let e;
-    for(e of this.props.searchResult[index1].streams)
-    // for(e of this.props.stationList[index1].streams)
+    // for(e of this.props.searchResult[index1].streams)
+    for(e of this.props.stationList[index1].streams)
     {
       let playable = true;
       // if(ReactPlayer.canPlay(e.stream)){ this.setState({ link: e.stream }); return;}
@@ -54,30 +55,12 @@ class Station extends React.Component {
 
 	render() {
 		return (
-			<Container className="mt-5 mb-5 ml-5 mr-5">
-				<Container fluid className="col-6 col-offset-3">
-					<InputGroup>
-						<Input
-							val={this.props.searchQuery}
-							onChange={(e) => {
-								this.props.onChangeSearchQuery(e.target.value);
-							}}
-							type="text"
-						/>
-						<Button
-							color="dark"
-							onClick={() => {
-								this.props.search(this.props.searchQuery);
-							}}
-						>
-							Search
-						</Button>
-					</InputGroup>
-				</Container>
 				<Container fluid className="text-center col-12">
-					<ReactPlayer className="mr-0" onPlay={()=>this.handlePlay()} controls onError={()=>this.handleError(event)} playing url={this.state.link}>some Text</ReactPlayer>
-					<Container>
-						{this.props.searchResult.map((e, index1) => {
+                <Container>
+					<ReactPlayer className="mr-0" height="50px" style={{align:'center'}} onPlay={()=>this.handlePlay()} controls onError={()=>this.handleError(event)} playing url={this.state.link}>some Text</ReactPlayer>
+					</Container>
+                    <Container>
+						{this.props.stationList.map((e, index1) => {
 							return (
 								<Card key={index1}>
 									<CardHeader>
@@ -91,8 +74,7 @@ class Station extends React.Component {
 						})}
 					</Container>
 				</Container>
-				
-			</Container>
+			
 		);
 	}
 
@@ -114,10 +96,11 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onChangeSearchQuery: (query) => {
 			dispatch(actions.changeSearchQuery(query));
-		}
+        },
+        onGetPopular: ()=> dispatch(actions.getPopular())
 	};
 };
 
 // const connectStation = connect(mapStateToProps, mapDispatchToProps)(Station);
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(Station);
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Popular);
