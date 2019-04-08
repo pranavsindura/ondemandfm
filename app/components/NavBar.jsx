@@ -44,7 +44,10 @@ class NavBar extends React.Component {
 								<NavLink href="/search">Search</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink href="/popular">Popular Stations</NavLink>
+								<NavLink href="/popular">Popular</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink href="https://github.com/pranavsindura/ondemandfm">Github</NavLink>
 							</NavItem>
 							<NavItem>
 								<NavLink href="/about">About Us</NavLink>
