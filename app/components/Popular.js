@@ -3,9 +3,11 @@ const { connect } = require('react-redux');
 const actions = require('../actions');
 let ReactPlayer = require('react-player').default;
 const Axios = require('axios');
+let loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+
 // console.log(ReactPlayer.ReactPlayer);
 
-const { Container, Card, CardHeader, CardBody, Input, InputGroup, Media, ButtonGroup, Button } = require('reactstrap');
+const { Container,CardFooter, CardColumns, Card, CardHeader, CardBody, Input, InputGroup, Media, ButtonGroup, Button } = require('reactstrap');
 
 class Popular extends React.Component {
 	constructor(props) {
@@ -54,7 +56,40 @@ class Popular extends React.Component {
   }
 
 	render() {
-		return (
+    // console.log(this.props.stationList);
+    if(this.props.stationList.length)
+    {
+    return(
+      <Container>
+          <Container sm={{size:8}} md={{size:4, offset:4}} lg={{size:4, offset:4}} className="text-center">
+				<ReactPlayer className="" style={{align: 'center'}} height="50px" width="300px" onPlay={()=>this.handlePlay()} controls onError={()=>this.handleError(event)} playing url={this.state.link}>some Text</ReactPlayer>
+				</Container>
+        <Container>
+        <CardColumns>
+						{this.props.stationList.map((e, index1) => {
+							return (
+								<Card key={index1}>
+									<CardHeader>
+										{e.name}, {e.country}
+									</CardHeader>
+									<CardBody>
+									<p>{e.categories[0].description?e.categories[0].description:loremIpsum}</p>
+									<p><a href={e.website}>{e.website}</a></p>
+									</CardBody>
+									<CardFooter>
+									<Button color="primary" onClick={()=> this.handleLink(index1)}>Play</Button>
+									</CardFooter>
+								</Card>
+							);
+						})}
+            </CardColumns>
+					</Container>
+				</Container>
+    );
+          }
+          else
+          return null;
+		/*return (
 				<Container fluid className="text-center col-12">
                 <Container>
 					<ReactPlayer className="mr-0" height="50px" style={{align:'center'}} onPlay={()=>this.handlePlay()} controls onError={()=>this.handleError(event)} playing url={this.state.link}>some Text</ReactPlayer>
@@ -75,7 +110,7 @@ class Popular extends React.Component {
 					</Container>
 				</Container>
 			
-		);
+		);*/
 	}
 
 }

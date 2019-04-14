@@ -4,14 +4,14 @@
 
 
 let initialState = {
-  stationList: [  ],
+  stationList: [],
   searchQuery: '',
   searchResult: []
 };
 
 let reducer = (state = initialState, action)=>
 {
-  // console.log(process.env);
+  // console.log(state);
   let newState = {...state};
   switch(action.type){
     case 'GET_ALL': newState.stationList = action.payload; return newState;

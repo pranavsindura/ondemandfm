@@ -2,10 +2,12 @@ const React = require('react');
 const { connect } = require('react-redux');
 const actions = require('../actions');
 let ReactPlayer = require('react-player').default;
+let Link = require('react-router-dom').Link;
 const Axios = require('axios');
+let loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 // console.log(ReactPlayer.ReactPlayer);
-
-const { Container, Card, CardHeader, CardBody, Input, InputGroup, Media, ButtonGroup, Button } = require('reactstrap');
+ 
+const { Container, Card,CardColumns,CardFooter, CardHeader, CardBody, Input, InputGroup, Media, ButtonGroup, Button } = require('reactstrap');
 
 class Station extends React.Component {
 	constructor(props) {
@@ -54,8 +56,8 @@ class Station extends React.Component {
 
 	render() {
 		return (
-			<Container className="mt-5 mb-5 ml-5 mr-5">
-				<Container fluid className="col-6 col-offset-3">
+			<Container>
+				<Container sm={{size:8}} md={{size:4, offset:4}} lg={{size:4, offset:4}} fluid className="mt-5">
 					<InputGroup>
 						<Input
 							val={this.props.searchQuery}
@@ -74,9 +76,14 @@ class Station extends React.Component {
 						</Button>
 					</InputGroup>
 				</Container>
-				<Container fluid className="text-center col-12">
-					<ReactPlayer className="mr-0" onPlay={()=>this.handlePlay()} controls onError={()=>this.handleError(event)} playing url={this.state.link}>some Text</ReactPlayer>
+				<Container>
+					<p className="h5"> Search Results for '{this.props.searchQuery}'</p>
+				</Container>
+				<Container sm={{size:8}} md={{size:4, offset:4}} lg={{size:4, offset:4}} className="text-center">
+				<ReactPlayer className="" style={{align: 'center'}} height="50px" width="300px" onPlay={()=>this.handlePlay()} controls onError={()=>this.handleError(event)} playing url={this.state.link}>some Text</ReactPlayer>
+				</Container>
 					<Container>
+					<CardColumns>
 						{this.props.searchResult.map((e, index1) => {
 							return (
 								<Card key={index1}>
@@ -84,13 +91,18 @@ class Station extends React.Component {
 										{e.name}, {e.country}
 									</CardHeader>
 									<CardBody>
-                  <Button color="primary" onClick={()=> this.handleLink(index1)}>Play</Button>
+									<p>{e.categories[0].description?e.categories[0].description:loremIpsum}</p>
+									<p><a href={e.website}>{e.website}</a></p>
 									</CardBody>
+									<CardFooter>
+									<Button color="primary" onClick={()=> this.handleLink(index1)}>Play</Button>
+									</CardFooter>
 								</Card>
 							);
 						})}
+						</CardColumns>
 					</Container>
-				</Container>
+				
 				
 			</Container>
 		);
